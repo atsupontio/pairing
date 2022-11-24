@@ -703,7 +703,7 @@ pub mod g1 {
     );
 
     #[derive(Copy, Clone)]
-    pub struct G1Uncompressed([u8; 96]);
+    pub struct G1Uncompressed(pub [u8; 96]);
 
     impl AsRef<[u8]> for G1Uncompressed {
         fn as_ref(&self) -> &[u8] {
@@ -1402,7 +1402,7 @@ pub mod g2 {
     );
 
     #[derive(Copy, Clone)]
-    pub struct G2Uncompressed([u8; 192]);
+    pub struct G2Uncompressed(pub [u8; 192]);
 
     impl AsRef<[u8]> for G2Uncompressed {
         fn as_ref(&self) -> &[u8] {
